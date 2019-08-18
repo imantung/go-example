@@ -34,4 +34,7 @@ func main() {
 	}()
 
 	process(ctx)
+	if ctx.Err() != nil {
+		fmt.Println(ctx.Err().Error())
+	}
 }
